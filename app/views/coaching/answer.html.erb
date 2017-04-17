@@ -1,0 +1,11 @@
+<div class="text-center">
+  <h1>You: <%= @query %></h1>
+  <% if @query.include?("?") %>
+    <h1>Coach: Silly question, get dressed and go to work!</h1>
+  <% elsif @query == "I am going to work right now!" %>
+      <h1>Coach: good</h1>
+  <% else %>
+      <h1>Coach: I don't care, get dressed and go to work!</h1>
+  <% end %>
+  <%= link_to "Ask a new question", question_path, class: "btn btn-primary" %>
+</div>
